@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>cssFrame</title>
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+
+  <section class="section">
+    <div class="circle blue"><a href="#" id="1">hide()</a></div>
+    <div class="circle green"><a href="#" id="2">size()</a></div>
+    <div class="circle red"><a href="#" id="3">fontSize()</a></div>
+  </section>
+
+  <section class="section">
+    <div class="circle blue"><a href="#" id="4">bgColor()</a></div>
+    <div class="circle green"><a href="#" id="5">html()</a></div>
+    <div class="circle blue"><a href="#" id="6">green to yellow</a></div>
+  </section>
+
+  <section class="section">
+       <div class="circle green"><a href="#" id="7">Скрыть синие </a></div>
+       <div class="circle red"><a href="#" id="8">Отобразить все </a></div>
+  </section>
+
+  <script>
+
+  var Link1 = document.getElementById('1');
+  Link1.onclick = function(){
+     this.parentNode.hide();
+  };
+
+  var Link2 = document.getElementById('2');
+  Link2.onclick = function(){
+     this.parentNode.size(400,400);
+  };
+  var Link3 = document.getElementById('3');
+  Link3.onclick = function(){
+     this.parentNode.fontSize(11);
+  };
+  var Link4 = document.getElementById('4');
+  Link4.onclick = function(){
+     this.parentNode.bgColor("grey");
+  };
+  var Link5 = document.getElementById('5');
+  Link5.onclick = function(){
+    this.parentNode.html("Текст изменен");
+  };
+  var Link6 = document.getElementById('6');
+  Link6.onclick = function(){
+      document.getElementsByClassName('green').bgColor('gold');
+  };
+  var Link7 = document.getElementById('7');
+  Link7.onclick = function(){
+      document.getElementsByClassName('circle blue').hide();
+  };
+  var Link8 = document.getElementById('8');
+  Link8.onclick = function(){
+      document.getElementsByClassName('circle ').show();
+  };
+
+  </script>
+
+</body>
+</html>
